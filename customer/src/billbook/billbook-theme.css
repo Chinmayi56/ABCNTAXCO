@@ -1,0 +1,269 @@
+
+/* =========================================
+   MY BILLBOOK — WHITE & BLUE THEME
+   Scope: BillBook customer workspace only
+   ========================================= */
+
+:root {
+  --bb-primary: #2563eb;
+  --bb-primary-hover: #1d4ed8;
+  --bb-primary-light: #eff6ff;
+  --bb-primary-border: #bfdbfe;
+
+  --bb-background: #f8fafc;
+  --bb-surface: #ffffff;
+  --bb-sidebar: #ffffff;
+
+  --bb-text: #0f172a;
+  --bb-text-secondary: #64748b;
+  --bb-border: #e2e8f0;
+
+  --bb-success: #16a34a;
+  --bb-warning: #d97706;
+  --bb-danger: #dc2626;
+
+  --bb-radius: 12px;
+  --bb-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* Main workspace */
+.bb-app,
+.billbook-app,
+#billbook-root {
+  background: var(--bb-background);
+  color: var(--bb-text);
+  min-height: 100vh;
+}
+
+/* Global typography */
+.bb-app *,
+.billbook-app *,
+#billbook-root * {
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.bb-app aside,
+.billbook-app aside,
+#billbook-root aside,
+.bb-sidebar {
+  background: var(--bb-sidebar);
+  color: var(--bb-text);
+  border-right: 1px solid var(--bb-border);
+}
+
+/* Sidebar navigation */
+.bb-sidebar a,
+.bb-sidebar button,
+.bb-app aside a,
+.billbook-app aside a {
+  color: #475569;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.bb-sidebar a:hover,
+.bb-sidebar button:hover,
+.bb-app aside a:hover,
+.billbook-app aside a:hover {
+  background: var(--bb-primary-light);
+  color: var(--bb-primary);
+}
+
+/* Active navigation item */
+.bb-sidebar .active,
+.bb-sidebar a[aria-current="page"],
+.bb-sidebar button[aria-current="page"] {
+  background: var(--bb-primary-light);
+  color: var(--bb-primary);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Header and top navigation */
+.bb-header,
+.bb-topbar,
+.bb-app header,
+.billbook-app header {
+  background: #ffffff;
+  color: var(--bb-text);
+  border-bottom: 1px solid var(--bb-border);
+}
+
+/* Page headings */
+.bb-app h1,
+.bb-app h2,
+.bb-app h3,
+.billbook-app h1,
+.billbook-app h2,
+.billbook-app h3 {
+  color: var(--bb-text);
+}
+
+/* Dashboard and content cards */
+.bb-card,
+.bb-stat-card,
+.bb-dashboard-card,
+.bb-app .card,
+.billbook-app .card {
+  background: var(--bb-surface);
+  border: 1px solid var(--bb-border);
+  border-radius: var(--bb-radius);
+  box-shadow: var(--bb-shadow);
+}
+
+/* Metric labels */
+.bb-stat-card p,
+.bb-stat-card .label {
+  color: var(--bb-text-secondary);
+}
+
+/* Primary buttons */
+.bb-app button.primary,
+.billbook-app button.primary,
+.bb-app .btn-primary,
+.billbook-app .btn-primary,
+.bb-app button[type="submit"],
+.billbook-app button[type="submit"] {
+  background: var(--bb-primary);
+  color: #ffffff;
+  border: 1px solid var(--bb-primary);
+  border-radius: 8px;
+}
+
+.bb-app button.primary:hover,
+.billbook-app button.primary:hover,
+.bb-app .btn-primary:hover,
+.billbook-app .btn-primary:hover,
+.bb-app button[type="submit"]:hover,
+.billbook-app button[type="submit"]:hover {
+  background: var(--bb-primary-hover);
+}
+
+/* Search and form fields */
+.bb-app input,
+.bb-app select,
+.bb-app textarea,
+.billbook-app input,
+.billbook-app select,
+.billbook-app textarea {
+  background: #ffffff;
+  color: var(--bb-text);
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.bb-app input:focus,
+.bb-app select:focus,
+.bb-app textarea:focus,
+.billbook-app input:focus,
+.billbook-app select:focus,
+.billbook-app textarea:focus {
+  outline: none;
+  border-color: var(--bb-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Tables */
+.bb-app table,
+.billbook-app table {
+  background: #ffffff;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.bb-app thead,
+.billbook-app thead {
+  background: #f1f5f9;
+}
+
+.bb-app th,
+.billbook-app th {
+  color: #475569;
+  font-weight: 600;
+}
+
+.bb-app th,
+.bb-app td,
+.billbook-app th,
+.billbook-app td {
+  border-bottom: 1px solid var(--bb-border);
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.bb-app tbody tr:hover,
+.billbook-app tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* Links and icons */
+.bb-app a,
+.billbook-app a {
+  color: var(--bb-primary);
+}
+
+.bb-app svg,
+.billbook-app svg {
+  /* Preserve each icon's original dimensions and layout. */
+  flex-shrink: 0;
+}
+
+/* Blue badges and selected filters */
+.bb-badge-primary,
+.bb-app .selected,
+.billbook-app .selected {
+  background: var(--bb-primary-light);
+  color: var(--bb-primary);
+  border: 1px solid var(--bb-primary-border);
+}
+
+/* Charts and dashboard sections */
+.bb-chart-card,
+.bb-dashboard-section {
+  background: #ffffff;
+  border: 1px solid var(--bb-border);
+  border-radius: var(--bb-radius);
+}
+
+/* Mobile bottom navigation */
+.bb-bottom-nav,
+.bb-mobile-nav {
+  background: #ffffff;
+  border-top: 1px solid var(--bb-border);
+  color: var(--bb-text-secondary);
+}
+
+.bb-bottom-nav .active,
+.bb-mobile-nav .active {
+  color: var(--bb-primary);
+}
+
+/* Dividers */
+.bb-app hr,
+.billbook-app hr {
+  border: 0;
+  border-top: 1px solid var(--bb-border);
+}
+
+/* Preserve readability */
+.bb-app .text-muted,
+.billbook-app .text-muted {
+  color: var(--bb-text-secondary);
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  .bb-app main,
+  .billbook-app main,
+  #billbook-root main {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .bb-app th,
+  .bb-app td,
+  .billbook-app th,
+  .billbook-app td {
+    padding: 10px 12px;
+  }
+}
